@@ -1,0 +1,14 @@
+#1
+Репозиторий создан
+https://github.com/euromak/linux.git
+
+#2
+Установлен VB && Ubuntu 18 LTS
+
+#3
+sudo apt-get install gcc make perl
+sudo apt-get install mc
+sudo apt-get install openssh-server
+
+#4
+Установлен PuTTy и выполнено подключение к машине через ssh
