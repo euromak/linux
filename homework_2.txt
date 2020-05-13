@@ -1,0 +1,29 @@
+#1 
+Включен буфер обмена между ОС и установлен интефейс - internal
+
+#2 
+Из bash(windows) набираю команду ssh viktor@192.168.1.5 -> yes -> password
+Или заранее сгенерировать ключ ssh-keygen c на гостевой ОС скопировать содержимое id_rsa.pub в файл authorized_keys и использовать ssh viktor@192.168.1.5 -i c указанием пути id_rsa на хостовой ОС
+Либо через PuTTY
+
+#3 
+Добавить публичный ключ на github в настройках. 
+git clone git@github.com:euromak/linux.git
+git config --global user.name "euromak"
+git config --global user.email "mail@yandex.ru"
+git checkout -b homework_2
+touch homework_2
+git add *
+git commit -m "Added homework 2"
+git push --set-upstream origin homework_2  
+
+#4
+<script type="text/javascript">
+	function overstack() {
+		for(let i = 1; i > 0; i++) {
+			console.log(i);
+			overstack();
+		}
+	}
+	setTimeout(overstack, 10);
+</script>
