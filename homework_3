@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# First script
+
+mkdir -p ./tmp/lesson3/permissions && cd ./tmp/lesson3/permissions
+echo 'Hello world!' > file0
+ln file0 file1
+ln -s file1 file2 
+ln -s file2 ../file3
+echo | ls -lia
+
+#263242 drwxr-xr-x 2 viktor viktor 4096 мая 14 05:28 .
+#263078 drwxr-xr-x 3 viktor viktor 4096 мая 14 05:28 ..
+#263244 -rw-r--r-- 2 viktor viktor   13 мая 14 05:28 file0
+#263244 -rw-r--r-- 2 viktor viktor   13 мая 14 05:28 file1
+#263246 lrwxrwxrwx 1 viktor viktor    5 мая 14 05:28 file2 -> file1
+
+mv file{1,2} ../..
+cd ../..
+echo | ls -lia 
+
+# Работают, кроме file3
+# ./script.sh
+# rm -r tmp/
+
+
+
+
+
